@@ -9,7 +9,7 @@ class Blog(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     tags = TaggableManager()  # Tagging
-
+    image = models.ImageField(upload_to='blog_images/', blank=True, null=True)
     def __str__(self):
         return self.title
 

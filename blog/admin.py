@@ -5,7 +5,7 @@ from .models import Blog, Comment
 
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'created_at')
+    list_display = ('title', 'author', 'created_at','image')
     search_fields = ['title', 'body']
 
 @admin.register(Comment)
